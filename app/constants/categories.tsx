@@ -8,14 +8,11 @@ import {
 	GiSwimfins,
 	GiCampfire,
 	GiScubaMask,
-	GiGolfFlag,
 	GiAnimalSkull,
 	GiStoneBridge,
 	GiTreehouse,
-	GiGrapes,
 	GiChicken,
 	GiBiplane,
-	GiLotusFlower,
 } from 'react-icons/gi';
 import { MdBungalow, MdDownhillSkiing, MdBeachAccess, MdSnowmobile } from 'react-icons/md';
 

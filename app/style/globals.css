@@ -50,7 +50,6 @@
   }
 }
 
-
 @layer base {
   * {
     @apply scroll-smooth antialiased;
@@ -66,14 +65,13 @@
 ::-webkit-scrollbar {
   @apply h-px w-1;
 }
-
 ::-webkit-scrollbar-track {
   @apply bg-white;
 }
-
 ::-webkit-scrollbar-thumb {
   @apply rounded-lg bg-gray-200;
 }
+
 .leaflet-bottom,
 .leaflet-control,
 .leaflet-pane,

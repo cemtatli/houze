@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 
-import ClientMounted from '@/components/ClientMounted'; // TODO: Next.js hydration errors
+import ClientMounted from '@/components/ClientMounted'; // TODO: Hydration Error
 import ModalsProvider from '@/providers/ModalsProvider';
 
 import Navbar from '@/components/navbar';
@@ -26,6 +26,9 @@ export const metadata: Metadata = {
 	title: 'Houze — Hotels, Book in 30 seconds',
 	description:
 		'The Best hotels are on Houze. Compare hotel prices, book hotels without prepayment. Read the latest customer reviews. See the latest pictures of hotels',
+	authors: {
+		name: 'cemtatli',
+	},
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
