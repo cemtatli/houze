@@ -89,14 +89,14 @@ const ListingCard: React.FC<ListingCardProps> = ({
 				<div title={location?.label} className='font-semibold text-lg truncate'>
 					{location?.region}, {location?.label}
 				</div>
-				<div className='font-light text-gray-500'>{reservationDate || data.category}</div>
+				<div className='font-base text-gray-500'>{reservationDate || data.category}</div>
 				<div className='flex flex-row items-center gap-1'>
 					<div className='font-semibold'>$ {price}</div>
 					{!reservation && <div className='font-base text-sm text-gray-600'>night</div>}
 				</div>
 				{onAction && actionLabel && (
 					<div className='pt-4'>
-						<Button disabled={disabled} small label={actionLabel} onClick={handleCancel} />
+						<Button disabled={disabled} small outline label={actionLabel} onClick={handleCancel} />
 					</div>
 				)}
 			</div>

@@ -29,23 +29,23 @@ const CountrySelect: React.FC<CountrySelectProps> = ({ value, onChange }) => {
 			formatOptionLabel={(option: any) => (
 				<div className='flex flex-row items-center gap-2.5 shrink-0'>
 					<span>{option.flag}</span>
-					<div>
+					<span>
 						{option.label},<span className='text-gray-400 ml-2 p-4'>{option.region}</span>
-					</div>
+					</span>
 				</div>
 			)}
 			classNames={{
-				control: () => "p-2 border-2",
-				input: () => "text-xl",
-				option: () => "text-lg cursor-pointer",
+				control: () => 'p-2 border-2',
+				input: () => 'text-xl',
+				option: () => 'text-lg cursor-pointer',
 			}}
 			theme={(theme) => ({
 				...theme,
-				borderRadius: 4,
+				borderRadius: 8,
 				colors: {
 					...theme.colors,
-					primary: "#333333",
-					primary25: "#f5ac70e1",
+					primary: '#333333',
+					primary25: '#f8a764e0',
 				},
 			})}
 		/>
