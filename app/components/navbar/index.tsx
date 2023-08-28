@@ -19,7 +19,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
 			<header className='sticky top-0 z-10 flex h-20 items-center justify-between border-b border-gray-200 bg-white py-2.5'>
 				<Container>
 					<nav className='flex items-center justify-between gap-5 md:gap-0'>
-						<Logo size={40} />
+						<Logo size={36} />
 						<Search />
 						<Menu currentUser={currentUser} />
 					</nav>

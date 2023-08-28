@@ -61,7 +61,6 @@ const RegisterModal = () => {
 		loginModal.onOpen();
 	}, [registerModal, loginModal]);
 
-	console.log(errors);
 	const body = (
 		<div className='flex flex-col gap-5 pt-8 md:pt-0'>
 			<Heading center title='Welcome to Houze' subtitle='Create an account' />

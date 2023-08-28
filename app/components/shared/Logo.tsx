@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 interface LogoProps {
-	size: number;
+	size?: number;
 	label_color?: string;
 	label?: string;
 	color?: string;
@@ -9,9 +9,9 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({
 	size = 32,
-	color = "#fe5829",
-	label = "Houze",
-	label_color = "text-brand-500",
+	color = '#fe5829',
+	label = 'Houze',
+	label_color = 'text-[#fe5829]',
 }) => {
 	return (
 		<Link title={label} aria-label={label} href={'/'} className={'flex items-center gap-x-1'}>
@@ -68,7 +68,8 @@ const Logo: React.FC<LogoProps> = ({
 					stroke={color}
 					strokeWidth='0'></path>
 			</svg>
-			<span className={`hidden text-xl mt-1 uppercase font-bold md:block ${label_color}`}>
+			<span
+				className={`hidden text-2xl uppercase font-extrabold md:block tracking-tight ${label_color}`}>
 				{label}
 			</span>
 		</Link>

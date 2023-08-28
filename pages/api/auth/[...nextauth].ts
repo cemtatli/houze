@@ -31,7 +31,7 @@ export const authOptions: AuthOptions = {
 				});
 
 				if (!user || !user?.hashedPassword) {
-					throw new Error('Invalid credentials');
+					throw new Error('No matched user found');
 				}
 
 				const isCorrectPassword = await bcrypt.compare(credentials.password, user.hashedPassword);

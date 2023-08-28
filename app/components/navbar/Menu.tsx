@@ -44,7 +44,7 @@ const Menu: React.FC<MenuProps> = ({ currentUser }) => {
 			<div className='flex flex-row items-center gap-2.5'>
 				<div
 					onClick={() => onRent()}
-					className='hidden cursor-pointer text-sm truncate items-center gap-x-2 font-medium rounded-full px-4 py-2.5 ring-gray-100 ring-offset-1 transition focus-within:ring-2 hover:bg-gray-50 md:flex'>
+					className='hidden cursor-pointer text-sm truncate items-center gap-x-2 font-medium rounded-full px-4 py-2.5 ring-gray-100 ring-offset-1 transition focus-within:ring-2 hover:bg-gray-50 lg:flex'>
 					<GiReceiveMoney className='shrink-0' /> Houze is house
 				</div>
 
