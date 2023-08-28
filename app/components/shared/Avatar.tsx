@@ -7,7 +7,7 @@ import { SafeUser } from '@/types';
 
 interface AvatarProps {
 	size: number;
-	value: SafeUser | any | null;
+	value?: any; //SORRY
 	currentUser?: SafeUser | null;
 }
 
