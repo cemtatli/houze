@@ -100,6 +100,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
 
 	return (
 		<div className='flex flex-col gap-6 pt-12 max-w-screen-xl mx-auto'>
+
 			<ListingHead
 				title={listing.title}
 				imageSrc={listing.imageSrc}
