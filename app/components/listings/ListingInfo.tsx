@@ -40,7 +40,7 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
 		<div className='col-span-4 flex flex-col gap-6'>
 			<div className='flex flex-col gap-2'>
 				<div className='text-lg md:text-xl font-semibold flex flex-row items-center gap-2'>
-					<Avvvatars size={32} value={user?.name} />
+					{user && <Avvvatars size={32} value={user?.name} />}
 					<div>Hosted by {user?.name}</div>
 				</div>
 				<div className='flex flex-row items-center gap-4 font-light text-gray-500'>
