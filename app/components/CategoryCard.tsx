@@ -48,11 +48,11 @@ const CategoryCard: React.FC<CategoryCardProps> = ({icon: Icon, label, selected}
 			onClick={handleClick}
 			className={`flex flex-col items-center justify-center p-2 text-center transition duration-150 cursor-pointer ${
 				selected
-					? 'text-brand-400 hover:text-brand-400'
-					: 'border-transparent text-gray-400/80 hover:text-gray-900'
+					? 'text-brand-400 hover:text-brand-400 scale-110 transition ease-in'
+					: 'border-transparent text-gray-400 hover:text-gray-900'
 			}`}>
 			<Icon size={28} />
-			<p title={label} className='font-medium text-sm mt-1'>
+			<p title={label} className='font-medium text-sm mt-1 truncate'>
 				{label}
 			</p>
 		</div>

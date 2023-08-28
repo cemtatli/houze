@@ -3,18 +3,22 @@
 import axios from 'axios';
 import { useCallback, useState } from 'react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
+
 import { signIn } from 'next-auth/react';
 import Heading from '@/components//shared/Heading';
-import useRegisterModal from '@/hooks/useRegisterModal';
-import { zodResolver } from '@hookform/resolvers/zod';
-import Input from '@/components//shared/Input';
-import { toast } from 'react-hot-toast';
-import Button from '@/components//shared/Button';
-import { IoLogoGoogle } from 'react-icons/io';
-import useLoginModal from '@/hooks/useLoginModal';
 
+import Input from '@/components/shared/Input';
+import Button from '@/components/shared/Button';
 import Modal from '@/components/modals/Modal';
+
+import useLoginModal from '@/hooks/useLoginModal';
+import useRegisterModal from '@/hooks/useRegisterModal';
+
+import { zodResolver } from '@hookform/resolvers/zod';
 import registerSchema from '@/validations';
+
+import { toast } from 'react-hot-toast';
+import { FcGoogle } from 'react-icons/fc';
 
 const RegisterModal = () => {
 	const registerModal = useRegisterModal();
@@ -57,7 +61,6 @@ const RegisterModal = () => {
 		loginModal.onOpen();
 	}, [registerModal, loginModal]);
 
-
 	console.log(errors);
 	const body = (
 		<div className='flex flex-col gap-5 pt-8 md:pt-0'>
@@ -92,12 +95,7 @@ const RegisterModal = () => {
 	const footer = (
 		<div className='flex flex-col gap-4 mt-4'>
 			<hr />
-			<Button
-				outline
-				label='Login with Google'
-				icon={IoLogoGoogle}
-				onClick={() => signIn('google')}
-			/>
+			<Button outline label='Login with Google' icon={FcGoogle} onClick={() => signIn('google')} />
 			<div className=' text-gray-500 text-center text-sm'>
 				<p>
 					{' '}

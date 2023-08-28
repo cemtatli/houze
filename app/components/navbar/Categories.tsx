@@ -18,7 +18,7 @@ const Categories = () => {
 	return (
 		<div className='border-b border-gray-200 '>
 			<Container>
-				<div className='flex pt-2.5 flex-row items-center justify-between overflow-x-auto'>
+				<div className='flex pt-2.5 flex-row items-center gap-4 md:gap-0 justify-between overflow-x-auto overflow-y-hidden'>
 					{categories.map((item) => (
 						<CategoryCard
 							description={item.description}

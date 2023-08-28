@@ -12,7 +12,7 @@ import Input from '@/components/shared/Input';
 
 import { toast } from 'react-hot-toast';
 import Button from '@/components/shared/Button';
-import { IoLogoGoogle } from 'react-icons/io';
+import { FcGoogle } from 'react-icons/fc';
 import useRegisterModal from '@/hooks/useRegisterModal';
 
 const LoginModal = () => {
@@ -27,8 +27,8 @@ const LoginModal = () => {
 		formState: { errors },
 	} = useForm<FieldValues>({
 		defaultValues: {
-			email: "",
-			password: "",
+			email: '',
+			password: '',
 		},
 	});
 
@@ -40,14 +40,14 @@ const LoginModal = () => {
 	const onSubmit: SubmitHandler<FieldValues> = (data) => {
 		setIsLoading(true);
 
-		signIn("credentials", {
+		signIn('credentials', {
 			...data,
 			redirect: false,
 		}).then((callback) => {
 			setIsLoading(false);
 
 			if (callback?.ok) {
-				toast.success("Logged in");
+				toast.success(`Welcome`);
 				router.refresh();
 				loginModal.onClose();
 			}
@@ -61,7 +61,14 @@ const LoginModal = () => {
 	const body = (
 		<div className='flex flex-col gap-4 pt-8 md:pt-0'>
 			<Heading center title='Welcome back' subtitle='Login to your account' />
-			<Input id='email' disabled={isLoading} register={register} errors={errors} label='Email' required />
+			<Input
+				id='email'
+				disabled={isLoading}
+				register={register}
+				errors={errors}
+				label='Email'
+				required
+			/>
 			<Input
 				type='password'
 				id='password'
@@ -76,12 +83,14 @@ const LoginModal = () => {
 	const footer = (
 		<div className='flex flex-col gap-4 mt-4'>
 			<hr />
-			<Button outline label='Login with Google' icon={IoLogoGoogle} onClick={() => signIn("google")} />
+			<Button outline label='Login with Google' icon={FcGoogle} onClick={() => signIn('google')} />
 			<div className=' text-gray-500 text-center text-sm'>
 				<p>
 					First time using Houze?
-					<span onClick={onToggle} className=' text-neutral-800 cursor-pointer font-medium hover:underline'>
-						{" "}
+					<span
+						onClick={onToggle}
+						className=' text-neutral-800 cursor-pointer font-medium hover:underline'>
+						{' '}
 						Create an account
 					</span>
 				</p>
