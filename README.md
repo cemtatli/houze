@@ -1,3 +1,5 @@
+<img src="image.png" />
+
 # Houze 🛎️
 The Best hotels are on Houze. Compare hotel prices, book hotels without prepayment. Read the latest customer reviews. See the latest pictures of hotels.
 
@@ -18,6 +20,3 @@ The Best hotels are on Houze. Compare hotel prices, book hotels without prepayme
 - **Prisma:** An ORM (Object-Relational Mapping) tool that simplifies database operations.
 - **Tailwind CSS:** A utility-first CSS framework for building responsive and modern user interfaces.
 - **Leaflet:** An open-source JavaScript library for interactive maps.
-
-
-<img src="image.png" />

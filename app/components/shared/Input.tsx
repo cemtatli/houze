@@ -13,6 +13,7 @@ interface InputProps {
 	required?: boolean;
 	register: UseFormRegister<FieldValues>;
 	errors: FieldErrors;
+	message: any;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -24,6 +25,7 @@ const Input: React.FC<InputProps> = ({
 	required,
 	errors,
 	disabled,
+	message,
 }) => {
 	const [showPassword, setShowPassword] = useState(false);
 
@@ -57,7 +59,7 @@ const Input: React.FC<InputProps> = ({
 					formatPrice ? 'left-10' : 'left-5'
 				} ${errors[id] ? 'text-red-500' : 'text-gray-500'} 
         `}>
-				{label}
+				{message ? message : label}
 			</label>
 		</div>
 	);

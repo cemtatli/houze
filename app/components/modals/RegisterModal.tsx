@@ -63,20 +63,20 @@ const RegisterModal = () => {
 		<div className='flex flex-col gap-5 pt-8 md:pt-0'>
 			<Heading center title='Welcome to Houze' subtitle='Create an account' />
 			<Input
+				message={errors.name?.message}
 				id='name'
 				disabled={isLoading}
 				register={register}
 				errors={errors}
 				label='Name'
-				required
 			/>
 			<Input
+				message={errors.email?.message}
 				id='email'
 				disabled={isLoading}
 				register={register}
 				errors={errors}
 				label='Email'
-				required
 			/>
 			<Input
 				type='password'
@@ -84,8 +84,8 @@ const RegisterModal = () => {
 				disabled={isLoading}
 				register={register}
 				errors={errors}
+				message={errors.password?.message}
 				label='Password'
-				required
 			/>
 		</div>
 	);
