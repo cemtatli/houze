@@ -13,7 +13,7 @@ interface InputProps {
 	required?: boolean;
 	register: UseFormRegister<FieldValues>;
 	errors: FieldErrors;
-	message: any;
+	message?: any;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -59,8 +59,9 @@ const Input: React.FC<InputProps> = ({
 					formatPrice ? 'left-10' : 'left-5'
 				} ${errors[id] ? 'text-red-500' : 'text-gray-500'} 
         `}>
-				{message ? message : label}
+				{label}
 			</label>
+			{message && <small className='text-xs text-red-500'>{message}</small>}
 		</div>
 	);
 };
