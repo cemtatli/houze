@@ -54,9 +54,9 @@ const Search = () => {
 			onClick={searchModal.onOpen}
 			className='w-full cursor-pointer text-sm rounded-full border py-1 group transition ring-gray-100/50 hover:ring-gray-100/80 ring-2 md:w-auto'>
 			<div className='flex flex-row items-center justify-between px-1 text-gray-600 font-medium'>
-				<div className='px-6'> {locationLabel}</div>
+				<div className='px-6 text-gray-600'> {locationLabel}</div>
 				<div className='hidden flex-1 border-x px-6 text-center md:block'>{durationLabel}</div>
-				<div className='flex flex-row items-center gap-2.5 text-gray-400'>
+				<div className='flex flex-row items-center gap-2.5 text-gray-600'>
 					<div className='hidden px-3 pl-4 md:block'>{guestLabel}</div>
 					<span className='flex h-8 w-8 items-center justify-center rounded-full ring-1 ring-brand-300 ring-opacity-50 bg-gradient-to-br from-brand-300 to-brand-400 group-hover:bg-brand-50 transition text-white'>
 						<LuSearch strokeWidth={3} size={18} />

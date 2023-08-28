@@ -14,7 +14,7 @@ const Logo: React.FC<LogoProps> = ({
 	label_color = "text-brand-500",
 }) => {
 	return (
-		<Link title={label} aria-label={label} href={"/"} className={"flex items-center gap-x-1"}>
+		<Link title={label} aria-label={label} href={'/'} className={'flex items-center gap-x-1'}>
 			<svg
 				className='transition -rotate-45'
 				width={size}
@@ -68,7 +68,9 @@ const Logo: React.FC<LogoProps> = ({
 					stroke={color}
 					strokeWidth='0'></path>
 			</svg>
-			<span className={`hidden text-lg mt-1 uppercase font-medium md:block ${label_color}`}>{label}</span>
+			<span className={`hidden text-2xl mt-1 uppercase font-medium md:block ${label_color}`}>
+				{label}
+			</span>
 		</Link>
 	);
 };
