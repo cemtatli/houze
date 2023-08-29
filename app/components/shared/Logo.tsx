@@ -68,8 +68,7 @@ const Logo: React.FC<LogoProps> = ({
 					stroke={color}
 					strokeWidth='0'></path>
 			</svg>
-			<span
-				className={`hidden text-2xl uppercase font-extrabold md:block tracking-tight ${label_color}`}>
+			<span className={`hidden text-xl uppercase font-bold md:block tracking-tight ${label_color}`}>
 				{label}
 			</span>
 		</Link>

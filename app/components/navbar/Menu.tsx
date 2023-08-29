@@ -44,8 +44,10 @@ const Menu: React.FC<MenuProps> = ({ currentUser }) => {
 			<div className='flex flex-row items-center gap-2.5'>
 				<div
 					onClick={() => onRent()}
-					className='hidden cursor-pointer text-sm truncate items-center gap-x-2 font-medium rounded-full px-4 py-2.5 ring-gray-100 ring-offset-1 transition focus-within:ring-2 hover:bg-gray-50 lg:flex'>
-					<GiReceiveMoney className='shrink-0' /> Houze is house
+					className='hidden cursor-pointer text-sm truncate items-center gap-x-2 font-medium rounded-full px-4 py-2.5 ring-gray-100 ring-offset-1 transition focus-within:ring-2 hover:bg-gray-50 md:flex'>
+					<div className='hidden lg:inline-flex gap-x-2'>
+						<GiReceiveMoney className='shrink-0' /> Houze is house
+					</div>
 				</div>
 
 				{/* Mobile Menu */}
@@ -61,7 +63,7 @@ const Menu: React.FC<MenuProps> = ({ currentUser }) => {
 			{isOpen && (
 				<div
 					className={`absolute -right-2.5 top-12 ${
-						currentUser ? 'w-44 md:w-full' : 'w-32'
+						currentUser ? 'w-48' : 'w-32'
 					} font-medium overflow-hidden rounded-lg border border-gray-200 bg-white transition md:right-0`}>
 					<div className='flex cursor-pointer flex-col rounded-lg p-2 z-50'>
 						{currentUser ? (
