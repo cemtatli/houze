@@ -13,7 +13,7 @@ import useRegisterModal from '@/hooks/useRegisterModal';
 import useLoginModalModal from '@/hooks/useLoginModal';
 import useRentModal from '@/hooks/useRentModal';
 
-import { LuMenu as MenuIcon } from 'react-icons/lu';
+import { TbMenu2 as MenuIcon } from 'react-icons/tb';
 import { BiLogOutCircle } from 'react-icons/bi';
 import { GiReceiveMoney } from 'react-icons/gi';
 
@@ -54,11 +54,11 @@ const Menu: React.FC<MenuProps> = ({ currentUser }) => {
 				{/* Mobile Menu */}
 				<div
 					onClick={toggleOpen}
-					className='flex cursor-pointer flex-row items-center gap-5 rounded-full border border-gray-200 p-2 ring-gray-100/50 hover:ring-gray-100 ring-2 transition md:px-2.5 md:py-1'>
-					<MenuIcon size={20} />
+					className='flex cursor-pointer flex-row items-center gap-2.5 rounded-full border border-gray-200 p-1 pr-2 ring-gray-100/50 hover:ring-gray-50/80 ring-2 transition md:py-1'>
 					<div className='hidden md:block'>
 						<Avatar currentUser={currentUser} size={32} value={currentUser?.name} />
 					</div>
+					<MenuIcon size={18} />
 				</div>
 			</div>
 			{isOpen && (
