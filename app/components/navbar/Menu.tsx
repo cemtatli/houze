@@ -1,20 +1,21 @@
 "use client";
 
 import React, { useState, useCallback } from "react";
-import { signOut } from "next-auth/react";
+import { useRouter } from 'next/navigation';
+import { signOut } from 'next-auth/react';
 import { SafeUser } from '@/types';
 
 import Avatar from '@/components/shared/Avatar';
 import MenuItem from '@/components/navbar/MenuItem';
+import { userMenu } from '@/constants/user-menu';
 
 import useRegisterModal from '@/hooks/useRegisterModal';
 import useLoginModalModal from '@/hooks/useLoginModal';
 import useRentModal from '@/hooks/useRentModal';
 
 import { LuMenu as MenuIcon } from 'react-icons/lu';
-import { BiTrip, BiHeart, BiCalendar, BiBuildingHouse, BiLogOutCircle } from 'react-icons/bi';
+import { BiLogOutCircle } from 'react-icons/bi';
 import { GiReceiveMoney } from 'react-icons/gi';
-import { useRouter } from 'next/navigation';
 
 interface MenuProps {
 	currentUser?: SafeUser | null;
@@ -75,22 +76,14 @@ const Menu: React.FC<MenuProps> = ({ currentUser }) => {
 									<span className='truncate'>{currentUser.name}</span>
 								</div>
 								<hr className='my-2 block' />
-								<MenuItem icon={BiTrip} onClick={() => router.push('/trips')} label='Trips' />
-								<MenuItem
-									icon={BiHeart}
-									onClick={() => router.push('/favorites')}
-									label='Favorites'
-								/>
-								<MenuItem
-									icon={BiCalendar}
-									onClick={() => router.push('/reservations')}
-									label='Reservations'
-								/>
-								<MenuItem
-									icon={BiBuildingHouse}
-									onClick={() => router.push('/properties')}
-									label='Properties'
-								/>
+								{userMenu.map((menu) => (
+									<MenuItem
+										key={menu.label}
+										icon={menu.icon}
+										label={menu.label}
+										onClick={() => router.push(menu.slug)}
+									/>
+								))}
 								<MenuItem
 									icon={GiReceiveMoney}
 									onClick={() => rentModal.onOpen()}

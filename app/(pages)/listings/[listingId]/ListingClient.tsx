@@ -74,7 +74,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
 				listingId: listing?.id,
 			})
 			.then(() => {
-				toast.success('Listing reserved!');
+				toast.success('Listing reserved');
 				setDateRange(initialDateRange);
 				router.push('/trips');
 			})
@@ -100,7 +100,6 @@ const ListingClient: React.FC<ListingClientProps> = ({
 
 	return (
 		<div className='flex flex-col gap-6 pt-12 max-w-screen-xl mx-auto'>
-
 			<ListingHead
 				title={listing.title}
 				imageSrc={listing.imageSrc}

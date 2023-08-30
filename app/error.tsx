@@ -14,7 +14,7 @@ const ErrorState: React.FC<ErrorStateProps> = ({ error }) => {
 		toast.error(error.message);
 	}, [error]);
 
-	return <EmptyState title='Upsss' subtitle='Something went wrong!' />;
+	return <EmptyState title='Ups' subtitle='Something went wrong!' />;
 };
 
 export default ErrorState;

@@ -37,7 +37,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onChange, value }) => {
 						onClick={() => open?.()}
 						className='relative cursor-pointer hover:opacity-70 transition border-dashed border-2 p-20 border-gray-300 flex flex-col justify-center items-center gap-4 text-gray-600'>
 						<MdAddAPhoto size={44} />
-						<div className='font-semibold text-lg'>Click to upload</div>
+						<div className='font-medium text-lg'>Click to upload</div>
 						{value && (
 							<div className='absolute inset-0 w-full h-full'>
 								<Image fill style={{ objectFit: 'cover' }} src={value} alt='Houze' />

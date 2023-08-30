@@ -11,9 +11,9 @@ interface AvatarProps {
 	currentUser?: SafeUser | null;
 }
 
-const Avatar: React.FC<AvatarProps> = ({ size, value, currentUser }) => {
+const Avatar: React.FC<AvatarProps> = ({ size, value, currentUser, ...rest }) => {
 	return currentUser ? (
-		<Avvvatars value={value} size={size} style='character' />
+		<Avvvatars {...rest} value={value} size={size} style='character' />
 	) : (
 		<Image
 			className='rounded-full bg-contain'

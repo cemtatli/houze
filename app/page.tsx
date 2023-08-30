@@ -5,6 +5,7 @@ import ListingCard from '@/components/listings/ListingCard';
 import getListings, { IListingsParams } from '@/actions/getListings';
 import getCurrentUser from '@/actions/getCurrentUser';
 
+
 interface HomeProps {
 	searchParams: IListingsParams;
 }
